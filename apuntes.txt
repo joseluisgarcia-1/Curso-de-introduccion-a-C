@@ -153,19 +153,61 @@ Finalizacion de la función main (return)
 Tipos de Datos en el lenguaje C
 ***Clase 8 Tipos de datos***
 
+/* Tipos básicos de datos aritméticos */
+Basic Types:
+    (A) Valores enteros, Aritméticos int 4 Bytes -2,147,483,648 to 2,147,483,647
+        - unsigned int: 4 Bytes, este es un tipo de dato sin signo, es decir, esto nos permite no tener números negativos
+            0 to 4,294,967,295
+        - short: es de 2 Bytes 
+        - unsigned short: es de 2 Bytes, 0 to 65,535
+        - long: 8 Bytes es para cifras muchísimo más grandes
+        - unsigned long 
 
+    (B) De punto flotante float
+        - float 4 bytes 1.2E-38 to 3.4e+38, 6 decimal places(6 posiciones decimales)
+        - double 8 bytes 2.3E-308 to 1.7E+308, 15 decimal places (15 posiciones decimales)
+        - long double 10 bytes 3.4E-4932 to 1.1E+4932, 19 decimal places(19 posiciones decimales)
 
 ***Clase 9 Tipo de dato void***
 
-
+void: Especifíca que no hay valor disponible, se usa en 3 escenarios
+    1. Función retorna un tipo de dato void, lo que quiere decir es que una función cuando se ejecute no
+        nos va a retornar ningún valor
+        /*Esta función no nos va retornar ningún valor*/
+        /* Una función se declara de la siguiente manera */
+        - void function()
+    2. Función tiene argumentos de tipo void 
+        - son funciones que no aceptan ningún parámetro entonces debe tener void adentro
+        -int rand(void)
+        - los tipos de datos también se usan en funciones, variables, etc.
+    3. Puntero ó apuntador que va a la dirección en memoria de un objeto, pero no le importa 
+        el tipo de dato que tenga
+        - Lo que pasa en este caso es que se puede apuntar a una dirección de memoria para obtener un dato, pero no 
+        necesariamente se va ser capaz de que diga, cuál va ser el tipo de dato que se va estár trabajando
+        - casteo: Agarrar una información y pasarla ó transformarla a un tipo de dato específico
+            ejemplo: puede ser de número entero a flotante
 
 ***Clase 10 Tipo de dato Enum***
 
-
+- Es una especie de lista, es un tipo de dato que nos va servir para guardar valores constantes
+- Las variables dentro de un enum solo pueden tener un valor
+/*Es una especie de lista, es un tipo de dato que nos va servir para guardar valores constantes
+Valores que siempre se van a usar y no se necesitan modificar
+Las variables dentro de un enum solo pueden tener un valor
+*/
+/*enum designElements {
+    ITALICS = 1;
+    BOLD = 2;
+    STRIKE = 3;
+}*/
 
 ***Clase 11 Tipo de dato char***
 
-
+- Nos sirve para almacenar caracteres pero que está constituido por un rango de valores
+- char 1 Byte -128 to 127
+    - podemos almacenar 256 valores
+- unsigned char 1 Byte 0 to 255
+    - podemos almacenar 256 valores
 
 Variables en el lenguaje C
 ***Clase 12 Declaración de variables***

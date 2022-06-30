@@ -1,0 +1,188 @@
+Introducción al lenguaje C
+***Clase 1 Qué aprenderás sobre el lenguaje C***
+
+- ¿Cómo funciona un programa típico en C
+- ¿Cómo declarar variables?
+- ¿Qué tipo de datos se puede usar en este lenguaje?
+- Por qué usar cierto tipo de dato en vez de otro
+- C es un lenguaje tipado, es decir, siempre se tiene que declarar que tipo de dato va acompañar una variable
+para que el lenguaje sepa qué cantidad de memoria debe reservar para nuestro computador con el sistema que estamos programando
+Ruta de cursos de C
+- Curso de Introducción a C
+- Curso de programación en C
+- Curso de funciones en C 
+- 
+
+***Clase 2 ¿Qué es el lenguaje C?***
+
+El lenguaje C es un tipo de lenguaje de programación de tipo estructurada, es decir, vamos a ir ejecutando las instrucciones de nuestro código
+en una orden específico que nosotros tengamos, suele ser: comienza en la primera línea y de ahí para abajo se va ejecutando línea a línea
+todo el código que tengamos, podemos usar librerías, vamos a poder crear funciones también
+- C es un lenguaje de paradigma estructurado
+- C es un lenguaje de nivel intermedio 
+- Es una lenguaje que soporta recursividad, o recursión
+- Es de tipo estático
+- Es un lenguaje que se podría considerar fuertemente tipado
+- Tiene que decirle de que tipo va ser las variables
+- Hay que decirle cuanta capacidad de memoria vamos a poder almacenar
+- Hay que decirle qué tamaño van a tener los datos que voy a manejar
+- Se aplica mucho en:
+    - Sistemas operativos
+    - Drivers
+    - Software de aplicación
+    - Sistemas embebidos
+
+Se creó por allá en 1972 y 1973 por Dennis Ritchie, con la idea de que él quería un lenguaje más comprensible, principalmente util para
+desarrollar aplicaciones en sistemas operativos UNIX, que se puede decir es el papá de sistemas operativos que conocemos en la actualidad
+como linux. 
+- El lenguaje C es una lenguaje compilado, es decir, es un lenguaje que necesitas pasar por el compilador, decirle al compilador a qué sistema 
+operativo quiere que apunte, y el compilador se encarga de agarrar el código escrito en C y se va poder generar un ejecutable, ya sea sistema operativo
+Windows o Linux
+- Al ser un lenguaje compilado permite tener mucho control de la memoria
+- Permite tener mucha velocidad de tiempo de ejecución
+
+Lenguajes de nivel alto:
+    Estos corren en su propio interprete que se encarga de pasarlo al computador
+    el motor v8 que usa chrome para interpretar el JavaScript del navegador está escrito en C++
+    - Perl
+    - Python
+    - Shell
+    - JavaScript
+Lenguajes de nivel alto/intermedio:
+    - C
+    - C++
+        - En estos está escrito la mayoría de malware,porque son lenguajes que permiten acceder a la memoria
+            son lenguajes muy muy adentro del pc
+Lenguaje de montaje:
+    - Intel X86, son los sets de instrucciones que da el fabricante del cpu
+    - etc
+Lenguaje de máquina:
+    - Representación hexadecimal de la lectura del código binario del sistema operativo
+        Es lo que termina en los archivos finales para que el sistema operativo lo pueda interpretar
+Código binario:
+    - Lectura del código binario por el hardware pero no legible para humanos
+
+- La velocidad de ejecución del programa entre más cercano al hardware más rápido va a ser
+- La lectura humana más difícil va ser mientras más de bajo nivel sea el lenguaje de programación
+
+***Clase 3 ¿Cómo funcionan las computadoras?***
+
+El profesor Ricardo Celis nos cuenta la historia y evolución de las computadoras, cómo funcionan y cómo pueden procesar información 
+con el sistema binario para entender los documentos, textos, vídeos, imágenes, sonidos o algoritmos que vamos a programar para agilizar 
+nuestro trabajo de todos los días.
+
+Las computadoras nos ayudan a trabajar con mayor velocidad y eficiencia porque pueden generar un resultado para resolver nuestras operaciones
+a partir de un conjunto de instrucciones previamente definidas. Además, así como en las películas, las computadoras tienen millones de dispositivos 
+electrónicos que conocemos como transistores y se encargan de convertir la electricidad en bits: el sistema binario de ceros y unos, 
+la menor expresión de información de las computadoras.
+
+- Un documento de texto es una colección de caracteresque son más que ceros y unos que el computador puede entender
+- Software son serie de instrucciones que se le da al computador para que esta pueda llevar a cabo procesos
+
+***Clase 4 ¿Por qué aprender C?***
+
+- Ayuda a entender los fundamentos de teoría de computación
+- Con C se puede acceder al control de memoria de un programa
+- Para hacer compiladores
+- Tienes que escribir mucho desde cero, C tiene pocas librerías, por lo que te toca escribirlas y eso te permite aprender más
+- C es un lenguaje más usado en programación de circuitos embebidos
+- Es muy rápidoen el momento de ejecución
+
+***Clase 5 Instalando C en Windows***
+
+enlace de donde se descargó el dev-c++
+https://sourceforge.net/projects/orwelldevcpp/
+
+
+Instalé el compilador en Windows y en la variable de entorno le puse gcc
+le pasé la siguiene ruta para instalarlo
+
+en el gcc: C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\
+y en el path lo mismo, nuevo: C:\Program Files (x86)\Dev-Cpp\MinGW64\bin\
+
+Recomendado para correr c en visual
+- https://platzi.com/tutoriales/1469-algoritmos/2765-compilando-cc-desde-visual-studio-code-windows-10/
+
+Ir a la terminal a la terminal VS Code
+Ir al directorio donde esta el Archivo que estamos escribiendo. Ejem: ‘xx.cp’
+Escribo ‘g++ xx.cpp -o a.exe’ (Esto crea el ejecutable)
+Para Ejecutar escribimos ‘./a.out’
+
+primer hola mundo
+
+#include <stdio.h>
+
+int main()
+{
+    printf("Hello world");
+    return 0;
+}
+
+***Clase 6 Instalando C en Linux***
+Lo instalé en ubuntu 18.04
+Para instalar C en ubuntu
+- sudo apt install gcc 
+cuando me sale error de instalación puede ser que el apt está desactualizado entonces lo actualizo con:
+- sudo apt update
+Volvemos a ejecutar la instalación y para ver la versión de C lo hacemos con:
+    - gcc --version
+
+Para escribir en vim para empezar a insertar caracteres es presionando i
+Para salir: :wq
+Para compilar el archivo c: gcc -o hello hello.c
+    - Explicación:
+        - gcc: compilador
+        - -o: flag por convención
+        - hello: es el output o nombre del archivo de salida que vamos a tener
+        - hello.c: archivos que vamos a compilar
+Cuando compilamos el archivo y lo vemos con ls, el nombre del archivo ejecutable se pone en color verde
+Para ejecutar el archivo: ./hello
+
+Estructura de un programa C
+***Clase 7 Estructura de un programa C***
+
+- Zona dónde se incluyen las librerías, o comandos que le dicen al compilador que incluyan esos archivos antes de comenzar la compilación
+    - #include <stdio.h>
+- Comentarios:
+    /* Así se hace un comentario en C*/
+Directivas de Pre-Compilador (librerías)
+Función main
+Código dentro de la función main
+Finalizacion de la función main (return)
+
+Tipos de Datos en el lenguaje C
+***Clase 8 Tipos de datos***
+
+
+
+***Clase 9 Tipo de dato void***
+
+
+
+***Clase 10 Tipo de dato Enum***
+
+
+
+***Clase 11 Tipo de dato char***
+
+
+
+Variables en el lenguaje C
+***Clase 12 Declaración de variables***
+
+
+
+***Clase 13 Declaración avanzada de variables***
+
+
+
+***Clase 14 Declaración de constantes***
+
+
+
+***Clase 15 Preprocessor directives: Define***
+
+
+
+Conclusiones
+***Clase 16 Conclusiones***

@@ -170,7 +170,7 @@ Basic Types:
 
 ***Clase 9 Tipo de dato void***
 
-void: Especifíca que no hay valor disponible, se usa en 3 escenarios
+void: Específica que no hay valor disponible, se usa en 3 escenarios
     1. Función retorna un tipo de dato void, lo que quiere decir es que una función cuando se ejecute no
         nos va a retornar ningún valor
         /*Esta función no nos va retornar ningún valor*/
@@ -212,19 +212,65 @@ Las variables dentro de un enum solo pueden tener un valor
 Variables en el lenguaje C
 ***Clase 12 Declaración de variables***
 
-
+Es la definición que le vamos a dar a un espacio reservado de la memoria para poder almacenar información 
+cada variable va tener un tipo específico, y esto determina el tamaño y la estructura que estamos reservando en la memoria
+- Se puede declarar variables afuera del main()
+- En C las variables siempre empiezan con una letra o con underscore(_), si la empezamos a declarar con símbolos o caracteres especiales
+eso no lo reconoce o lo da como error
+- Las variables pueden estár inicializadas o no, y si no se inicializan siempre va empezar en cero
+    - ejemplo:
+        - int cars = 30;
+        - int j;
+        - unsigned int fruits = 10;
+- //: sirve para hacer comentario en la línea actual y no pa un set de código
+- extern: sirve para cuando se va a declarar variables en diferentes archivos a lo largo del código
+    esto no siempre se usa, a menos que se este trabajando en proyectos muy grandes.
+    Entonces extern es pa que el compilador sepa que esa variable es externa y se va estár usando a lo largo del proyecto
+-%d: lo que hace esta instrucción es para que escriba justo donde se la ponga la variable que se le pase
+    ejemplo:
+            a = 10;
+            b = 23;
+            c = a+b;
+            printf("Value of sum is: %d",c);
+            return 0;
+            - En este ejemplo coloca el valor de la variable c al final del printf, y si por ejemplo
+            se lo coloco de la siguiente manera, el valor lo va colocar justo donde está el %d
+            printf("Value %d of sum is: ",c);
+    
+    ver archivo clase12_type_variable.c
 
 ***Clase 13 Declaración avanzada de variables***
 
+extern int a,b,c;
+pero al momento de usar estas variables dentro del código no va ser tan simple como inicializarlas y ya
+vamos a tener que hacer un definición nueva dentro de las variables para indicar que la vamos a estár usando 
+dentro del código, entonces más abajo lo que hacemos es lo siguiente
+int a,b,c;
 
+entonces se le dice al código:son variables externas pero en la parte que se indiquen de nuevo se informa que se van a utilizar
+- Hay que saber manejar los tipos de datos porque c en ocasiones no tiene el avance para poder decirte que está pasando tal error
+
+- ver ejemplo en el archivo: clase13_avanced_variables.c
 
 ***Clase 14 Declaración de constantes***
 
-
+string literal
+    - "es de humanos errar"
+        - esto el lenguaje C internamente lo está tomando como un array o un arreglo, una estructura de datos donde se guarda
+            caracter a caracter incluyendo los espacios en blanco
+        - En C está el tipo de dato String que si existe en otros lenguajes de programación
+        - En C si se quisiera trabajar con cadenas de caracter lo que se debe hacer es crear un array y dentro de ese array escribir 
+            char por char lo que se quiere guardar
+        
+- para declarar una variable como constante se usa la palabra reservada const
+- Las constantes siempre se declaran en MAYÚSCULAS
 
 ***Clase 15 Preprocessor directives: Define***
 
-
+- aprenderémos a usar Preprocessor directives: Define
+- Las constantes siempre se declaran en MAYÚSCULAS
+- define no necesita cerrar con ;
+- define se debe tener en la declaración de valores arriba(como global)
 
 Conclusiones
 ***Clase 16 Conclusiones***
